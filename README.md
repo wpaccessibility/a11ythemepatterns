@@ -1,2 +1,5 @@
 # Accessible Read More Links
-Accessible read more links for WordPress themes.
+
+Use these code snippets to implement accessible read more links in your WordPress themes.
+
+Remember to replace any text domains or function names, listed as `yourtheme`, with your own.
