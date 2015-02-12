@@ -24,27 +24,18 @@
     add_action( 'get_header', 'theme_add_skip_link', 1 );
 
     /**
-     * Semi-optional, tabindex fix for specific browsers. 
-     * Feel free to move it to your JS file instead. It's too short to warrant its own file enqueue.
-     * Read more: http://www.nczonline.net/blog/2013/01/15/fixing-skip-to-content-links/
+     * Tabindex fix for specific browsers to fix skip link.
+     * Read more:
+     * http://www.nczonline.net/blog/2013/01/15/fixing-skip-to-content-links/
      */
-    function theme_fix_tabindex() {
-    ?>
+    function theme_fix_skiplink() {
+        wp_register_script(
+            'theme_skiplink-fix',
+            get_stylesheet_directory_uri() . '/js/skiplink-fix.js',
+            array(),
+            '',
+            true );
 
-    <script async type="text/javascript">
-        window.addEventListener("hashchange", function(event) {
-            var element = document.getElementById(location.hash.substring(1));
-
-            if (element) {
-                if (!/^(?:a|select|input|button|textarea)$/i.test(element.tagName)) {
-                    element.tabIndex = -1;
-                }
-
-                element.focus();
-            }
-        }, false);
-    </script>
-    
-    <?php
+        wp_enqueue_script( 'theme_skiplink-fix' );
     }
-    add_action( 'wp_footer', 'theme_fix_tabindex' );
+    add_action( 'wp_enqueue_scripts', 'theme_fix_skiplink' );
