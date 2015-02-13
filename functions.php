@@ -12,7 +12,7 @@ function yourtheme_scripts() {
 		'1.0',
 		true
 	);
- 
+
 	/*
 	wp_enqueue_script(
 		'yourtheme-navigation',
