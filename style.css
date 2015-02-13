@@ -1,0 +1,14 @@
+/**
+ * Your themes dropdowns may be styled differently. Find every use of :hover in
+ * your dropdown css and add an equivalent selector using .focus
+ */
+
+#site-navigation ul li:hover > ul,
+#site-navigation ul li.focus > ul {
+	left: auto;
+}
+
+#site-navigation ul ul li:hover > ul,
+#site-navigation ul ul li.focus > ul {
+	left: 100%;
+}
