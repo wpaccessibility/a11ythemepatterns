@@ -10,7 +10,9 @@ function yourtheme_enqueue_scripts() {
 	$comment_i18n = array( 
 		'processing' => __( 'Processing...', 'yourtheme' ),
 		'flood' => sprintf( __( 'Your comment was either a duplicate or you are posting too rapidly. <a href="%s">Edit your comment</a>', 'yourtheme' ), '#comment' ),
-		'error' => __( 'There were errors in submitting your comment; complete the missing fields and try again!', 'yourtheme' )
+		'error' => __( 'There were errors in submitting your comment; complete the missing fields and try again!', 'yourtheme' ),
+		'emailInvalid' => __( 'That email appears to be invalid.', 'yourtheme' ),
+		'required' => __( 'This is a required field.', 'yourtheme' )
 	);
 	wp_localize_script( 'yourtheme.comments', 'yourthemeComments', $comment_i18n );
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

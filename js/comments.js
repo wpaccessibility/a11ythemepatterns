@@ -31,16 +31,20 @@
 			 * If error generated, print error. 
 			 */
 			$( '#commentform [aria-required=true]' ).each( function() {
+				var id = $(this).attr( 'id' ) + '-error';
 				if ( $.trim( $(this).val() ) == '' ) {
 					var labelText = $(this).prev('label').html();
-					$(this).parent().append( ' <span class="yourtheme-field-error">' + labelText + ' is a required field.</span>' );
+					// add aria-describedby with reference ID for error message.
+					$(this).attr( 'aria-describedby', id );
+					$(this).parent().append( ' <span class="yourtheme-field-error" id="' + id + '">' + yourthemeComments.required + '</span>' );
 					hasError = true;
 				}
 				if ( $(this).attr( 'name' ) == 'email' && $.trim( $(this).val() ) != '' ) {
 					var value = $(this).val();
 					var valid = yourthemeValidateEmail( value );
 					if ( !valid ) {
-						$(this).parent().append( ' <span class="yourtheme-field-error">That email appears to be invalid.</span>' );
+						$(this).attr( 'aria-describedby', id );
+						$(this).parent().append( ' <span class="yourtheme-field-error"id="' + id + '">' + yourthemeComments.emailInvalid + '</span>' );
 						hasError = true;
 					}
 				}
