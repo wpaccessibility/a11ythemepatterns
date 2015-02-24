@@ -1,0 +1,117 @@
+/**
+ * Accessible Dropdown Menu
+ * 
+ * Colors
+ * Base colors are high contrast but less than 21:1, to avoid triggering contrast sensitivity issues for users with dyslexia.
+ */
+.primary-menu, .primary-menu a, .primary-menu li.current_page_item > li a {
+	background: #111;
+	color: #e6e6e6;
+}
+/*
+ * Color change for current pages, :hover states, and :focus states change both background and foreground colors.
+ */
+.primary-menu li.current_page_item > a , .primary-menu li.current_page_item > li a:active, .primary-menu li.current_page_item > li a:focus, .primary-menu a:hover,.primary-menu a:active, .primary-menu a:focus, .primary-menu li.current_page_item a:hover, .primary-menu li li a:hover, .primary-menu li li a:active, .primary-menu li li a:focus {
+	background: #555;
+	color: #fff;
+}
+/*
+ * Second-level dropdown menus are nested within their parents, 
+ * but have a color difference to make the parent/child relationship more obvious
+ */
+.primary-menu ul ul ul li a {
+	background: #333;
+	color: #fff;
+}
+
+.primary-menu li.current_page_item > a:hover, .primary-menu li.current_page_item > a:focus {
+	background: #000;
+	color: #fff;
+}
+
+/* Sizing, Layout and Text Decoration */
+.primary-menu, .secondary-menu {
+	margin: .5em 0;
+	padding: 0;
+	font-size: 1.1em;
+	position: relative;
+}
+
+.primary-menu ul, .secondary-menu ul {
+	margin: 0 !important;
+	padding: 0;
+	list-style-type: none;
+}
+
+.primary-menu a, .primary-menu a:visited, .secondary-menu a, .secondary-menu a:visited  {
+	display: block;
+	font-weight: 400;
+	position: relative;
+}
+
+.primary-menu a, .primary-menu a:visited {
+	padding: .7em 1em;
+	text-decoration: none;
+}
+
+.primary-menu li.current_page_item > a {
+	text-decoration: underline;
+}
+
+.primary-menu li.current_page_item li a {
+	text-decoration: none;
+}
+
+.primary-menu a:hover,.primary-menu a:active, .primary-menu a:focus, .primary-menu li.current_page_item a:hover {
+	text-decoration: underline;
+}
+
+.primary-menu li.current_page_item > a:hover {
+	text-decoration: none; 
+}
+
+.primary-menu li, .secondary-menu li {
+	display: inline-block !important; 	
+	position: relative;
+}
+
+.primary-menu li {
+	padding: 0 !important;
+}
+
+.primary-menu li li {
+	width: 100%;
+	position: relative;
+	z-index: 10;
+}
+
+.primary-menu li li a, .primary-menu li li a:link, .primary-menu li li a:visited {
+	width: 100%;
+	border-radius: 0!important;
+	float: none;
+	margin: 0;
+	padding: 8px;
+	border-bottom: 1px solid #666;
+	font-size: .95em;
+}
+
+.primary-menu li ul {
+	position: absolute;
+	width: 12em;
+	left: -999em;
+	padding: 0;	
+}
+
+.primary-menu li:hover ul, .primary-menu li:active ul, .primary-menu li:focus ul, .primary-menu li.focus ul, .focus ul {
+	left: auto;
+	display: block;
+}
+
+.primary-menu li:hover ul, .primary-menu li.focus ul {
+	left: auto;
+}
+
+.primary-menu ul ul ul {
+	position: relative;
+	left: 0;
+}
