@@ -1,4 +1,12 @@
 # dropdown-menus
 Accessible dropdown menus for WordPress themes.
 
-Before using these files update all instances of the text domain (yourtheme), and if necessary the menu container ID (site-navigation) to match your theme. For jQuery update functions.php to enqueue jquery-dropdowns.js instead.
+The header.php is an example of where this code would be most likely to be placed. As with all items in the WordPress theme accessibility pattern library, only the specific elements relevant to the demo are included.
+
+= Basic =
+
+This is a basic accessible dropdown menu with minimal styles.
+
+= Vanilla JS =
+
+This offers similar functionality to the above, but is coded without jQuery. Replace tthe text 'yourtheme' with you're theme slug.
