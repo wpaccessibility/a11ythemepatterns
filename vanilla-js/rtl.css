@@ -1,0 +1,12 @@
+/* Add the equivalent .focus selectors to your rtl.css file */
+
+.site-navigation ul li:hover > ul,
+.site-navigation ul li.focus > ul {
+	right: auto;
+}
+
+.site-navigation ul ul li:hover > ul,
+.site-navigation ul ul li.focus > ul {
+	right: 100%;
+	left: auto;
+}
