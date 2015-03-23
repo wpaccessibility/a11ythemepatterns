@@ -18,5 +18,6 @@ Here are some tips to consider and to help you write a great report:
 * Accessibility Theme Patterns is backwards compatible with the two versions prior to the current stable version of WordPress.
 * Accessibility Theme Patterns uses HTML5 markup.
 * Currently, Accessibility Theme Patterns does not include build tools or preprocessors to keep things simple. This may change in the future.
+* The current WordPress [accessibility-ready information can be found here](https://make.wordpress.org/themes/handbook/review/accessibility/).
 
 By contributing code to Accessibility Theme Patterns, you grant its use under the [GNU General Public License v2 (or later)](http://www.gnu.org/licenses/gpl-2.0.html).
