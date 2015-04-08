@@ -19,9 +19,9 @@
      * Add a link first thing after the body element that will skip to the inner element.
      */
     function theme_add_skip_link() {
-        echo '<a class="skip-link" href="#inner">Skip to content</a>';
+        echo '<a class="skip-link" href="#inner">' . __('Skip to content', 'theme-text-domain') . '</a>';
     }
-    add_action( 'get_header', 'theme_add_skip_link', 1 );
+    add_action( 'genesis_before', 'theme_add_skip_link', 1 );
 
     /**
      * Tabindex fix for specific browsers to fix skip link.
