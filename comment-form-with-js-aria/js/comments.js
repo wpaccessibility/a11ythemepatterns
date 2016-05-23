@@ -36,7 +36,7 @@
 					var labelText = $(this).prev('label').html();
 					// add aria-describedby with reference ID for error message.
 					$(this).attr( 'aria-describedby', id );
-					$(this).parent().append( ' <span class="yourtheme-field-error" id="' + id + '">' + yourthemeComments.required + '</span>' );
+					$(this).parent().append( ' <span class="yourtheme-field-error" id="' + id + '">' + labelText + ': ' + yourthemeComments.required + '</span>' );
 					hasError = true;
 				}
 				if ( $(this).attr( 'name' ) == 'email' && $.trim( $(this).val() ) != '' ) {
