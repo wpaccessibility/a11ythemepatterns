@@ -9,5 +9,5 @@
 	overflow: hidden;
 	position: absolute !important;
 	width: 1px;
-	white-space: nowrap;
+	word-wrap: normal !important;
 }
